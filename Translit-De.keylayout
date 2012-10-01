@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.2 on 2012-09-30 at 22:52 (GMT+02:00)-->
-<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 02:58 (GMT+02:00)-->
+<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 03:01 (GMT+02:00)-->
 <keyboard group="0" id="5591" name="Translit-DE" maxout="1">
     <layouts>
         <layout first="0" last="4" modifiers="84" mapSet="fb0"/>
@@ -1725,6 +1725,7 @@
             <when state="State 4" output="ë"/>
             <when state="Y-Start" output="Э"/>
             <when state="j-Start" output="э"/>
+            <when state="y-Start" output="э"/>
         </action>
         <action id="8">
             <when state="none" output="и"/>
