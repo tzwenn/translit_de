@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.2 on 2012-09-30 at 22:52 (GMT+02:00)-->
-<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 02:03 (GMT+02:00)-->
-<keyboard group="0" id="5591" name="Translit-de" maxout="1">
+<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 02:36 (GMT+02:00)-->
+<keyboard group="0" id="5591" name="Translit-DE" maxout="1">
     <layouts>
         <layout first="0" last="4" modifiers="84" mapSet="fb0"/>
         <layout first="5" last="5" modifiers="84" mapSet="18c"/>
@@ -124,7 +124,7 @@
             <key code="9" output="в"/>
             <key code="10" action="0"/>
             <key code="11" output="б"/>
-            <key code="12" output="я"/>
+            <key code="12" action="я"/>
             <key code="13" output="щ"/>
             <key code="14" action="7"/>
             <key code="15" output="р"/>
@@ -262,7 +262,7 @@
             <key code="35" output="П"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="Л"/>
-            <key code="38" output="Й"/>
+            <key code="38" action="Й"/>
             <key code="39" output="Э"/>
             <key code="40" output="К"/>
             <key code="41" output="Ё"/>
@@ -1716,6 +1716,7 @@
         </action>
         <action id="7">
             <when state="none" output="е"/>
+            <when state="J-Start" output="Э"/>
             <when state="State 1" output="ê"/>
             <when state="State 2" output="é"/>
             <when state="State 3" output="è"/>
@@ -1731,6 +1732,7 @@
         </action>
         <action id="9">
             <when state="none" output="о"/>
+            <when state="J-Start" output="Ё"/>
             <when state="State 1" output="ô"/>
             <when state="State 2" output="ó"/>
             <when state="State 3" output="ò"/>
@@ -1741,6 +1743,7 @@
         </action>
         <action id="10">
             <when state="none" output="у"/>
+            <when state="J-Start" output="Ю"/>
             <when state="State 1" output="û"/>
             <when state="State 2" output="ú"/>
             <when state="State 3" output="ù"/>
@@ -1801,6 +1804,9 @@
             <when state="none" output="н"/>
             <when state="State 5" output="ñ"/>
         </action>
+        <action id="Й">
+            <when state="none" next="J-Start"/>
+        </action>
         <action id="з">
             <when state="none" next="zh-Start"/>
         </action>
@@ -1827,10 +1833,15 @@
             <when state="#-Start" output="Ъ"/>
             <when state="&#x0027;-Start" output="Ь"/>
         </action>
+        <action id="я">
+            <when state="none" output="я"/>
+            <when state="J-Start" output="Я"/>
+        </action>
     </actions>
     <terminators>
         <when state="#-Start" output="ъ"/>
         <when state="&#x0027;-Start" output="ъ"/>
+        <when state="J-Start" output="Й"/>
         <when state="State 1" output="^"/>
         <when state="State 2" output="´"/>
         <when state="State 3" output="`"/>
