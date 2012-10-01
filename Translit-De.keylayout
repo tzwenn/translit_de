@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.2 on 2012-09-30 at 22:52 (GMT+02:00)-->
-<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 03:01 (GMT+02:00)-->
+<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 03:05 (GMT+02:00)-->
 <keyboard group="0" id="5591" name="Translit-DE" maxout="1">
     <layouts>
         <layout first="0" last="4" modifiers="84" mapSet="fb0"/>
@@ -1863,10 +1863,10 @@
         <action id="ъ">
             <when state="none" next="#-Start"/>
             <when state="#-Start" output="Ъ"/>
-            <when state="&#x0027;-Start" output="Ь"/>
         </action>
         <action id="ь">
             <when state="none" next="&#x0027;-Start"/>
+            <when state="&#x0027;-Start" output="Ь"/>
         </action>
         <action id="я">
             <when state="none" output="я"/>
