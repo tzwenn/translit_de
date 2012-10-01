@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.2 on 2012-09-30 at 22:52 (GMT+02:00)-->
-<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 03:05 (GMT+02:00)-->
+<!--Last edited by Ukelele version 2.2.2 on 2012-10-01 at 03:19 (GMT+02:00)-->
 <keyboard group="0" id="5591" name="Translit-DE" maxout="1">
     <layouts>
         <layout first="0" last="4" modifiers="84" mapSet="fb0"/>
@@ -1830,7 +1830,8 @@
         <action id="Х">
             <when state="none" output="Х"/>
             <when state="Ch-Start" output="Ч"/>
-            <when state="S-Start" output="Ш"/>
+            <when state="S-Start" next="SHH-Start"/>
+            <when state="SHH-Start" output="Щ"/>
             <when state="Zh-Start" output="Ж"/>
         </action>
         <action id="Ц">
@@ -1851,10 +1852,12 @@
         <action id="х">
             <when state="none" output="х"/>
             <when state="Ch-Start" output="Ч"/>
-            <when state="S-Start" output="Ш"/>
+            <when state="S-Start" next="SHH-Start"/>
+            <when state="SHH-Start" output="Щ"/>
             <when state="Zh-Start" output="Ж"/>
             <when state="ch-Start" output="ч"/>
-            <when state="sh-Start" output="ш"/>
+            <when state="sh-Start" next="shh-start"/>
+            <when state="shh-start" output="щ"/>
             <when state="zh-Start" output="ж"/>
         </action>
         <action id="ц">
@@ -1878,6 +1881,7 @@
         <when state="Ch-Start" output="Ц"/>
         <when state="J-Start" output="Й"/>
         <when state="S-Start" output="С"/>
+        <when state="SHH-Start" output="Ш"/>
         <when state="State 1" output="^"/>
         <when state="State 2" output="´"/>
         <when state="State 3" output="`"/>
@@ -1888,6 +1892,7 @@
         <when state="ch-Start" output="ц"/>
         <when state="j-Start" output="й"/>
         <when state="sh-Start" output="с"/>
+        <when state="shh-start" output="ш"/>
         <when state="y-Start" output="ы"/>
         <when state="zh-Start" output="з"/>
     </terminators>
